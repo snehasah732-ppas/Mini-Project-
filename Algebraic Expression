@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    float a, x, b, result;
+
+    // Input values of a, x, and b
+    printf("Enter values of a, x, and b: ");
+    scanf("%f %f %f", &a, &x, &b);
+
+    // Check for division by zero
+    if ((a * x - b) == 0) {
+        printf("Error! Denominator becomes zero.\n");
+    } else {
+        // Calculate the expression (a*x)/(a*x - b)
+        result = (a * x) / (a * x - b);
+        printf("The result of (a*x)/(a*x - b) = %.2f\n", result);
+    }
+
+    return 0;
+}
