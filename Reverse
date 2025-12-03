@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main() {
+    FILE *fp;
+    char filename[50];
+    char ch, str[1000];
+    int n, i, count = 0;
+
+    printf("Enter file name: ");
+    scanf("%s", filename);
+
+    fp = fopen(filename, "r");
+    if (fp == NULL) {
+        printf("Error! Cannot open file.\n");
+        return 0;
+    }
+
+    // Read file contents into an array
+    while ((ch = fgetc(fp)) != EOF && count < 1000) {
+        str[count++] = ch;
+    }
+    fclose(fp);
+
+    printf("Enter number of characters to reverse: ");
+    scanf("%d", &n);
+
+    if (n > count) n = count;
+
+    // Reverse first n characters
+    for (i = 0; i < n / 2; i++) {
+        char temp = str[i];
+        str[i] = str[n - i - 1];
+        str[n - i - 1] = temp;
+    }
+
+    // Write reversed content back to file
+    fp = fopen(filename, "w");
+    for (i = 0; i < count; i++) {
+        fputc(str[i], fp);
+    }
+    fclose(fp);
+
+    printf("First %d characters reversed successfully!\n", n);
+
+    return 0;
+}
