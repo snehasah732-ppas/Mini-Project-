@@ -12,11 +12,11 @@ int findSubstring(char S[], char T[]) {
             if (S[i + j] != T[j])
                 break;
         }
-        if (j == lenT)   // full match
-            return i;    // return starting index
+        if (j == lenT)   
+            return i;    
     }
 
-    return -1; // not found
+    return -1; 
 }
 
 int main() {
