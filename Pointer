@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    char *p;
+    int len = 0;
+
+    printf("Enter a string: ");
+    gets(str);
+
+    p = str;   // pointer pointing to the string
+
+    while (*p != '\0') {
+        len++;
+        p++;   // move pointer to next character
+    }
+
+    printf("Length of the string = %d\n", len);
+
+    return 0;
+}
