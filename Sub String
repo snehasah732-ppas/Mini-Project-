@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <string.h>
+
+// Function to insert substring
+void insertSubstring(char mainStr[], char subStr[], int pos) {
+    char result[200];
+    int i, j = 0;
+
+    // Copy characters before position
+    for(i = 0; i < pos; i++)
+        result[j++] = mainStr[i];
+
+    // Copy substring
+    for(i = 0; subStr[i] != '\0'; i++)
+        result[j++] = subStr[i];
+
+    // Copy remaining part of main string
+    for(i = pos; mainStr[i] != '\0'; i++)
+        result[j++] = mainStr[i];
+
+    result[j] = '\0';  // Null terminate
+
+    printf("String after insertion: %s\n", result);
+}
+
+int main() {
+    char mainStr[100], subStr[50];
+    int pos;
+
+    printf("Enter main string: ");
+    gets(mainStr);  // or use fgets(mainStr, sizeof(mainStr), stdin);
+
+    printf("Enter substring to insert: ");
+    gets(subStr);
+
+    printf("Enter position to insert at (starting from 0): ");
+    scanf("%d", &pos);
+
+    insertSubstring(mainStr, subStr, pos);
+
+    return 0;
+}
