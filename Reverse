@@ -25,7 +25,7 @@ int main() {
 
     if (n > count) n = count;
 
-    // Reverse first n characters
+    
     for (i = 0; i < n / 2; i++) {
         char temp = str[i];
         str[i] = str[n - i - 1];
