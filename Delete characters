@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+void deleteChars(char s[], int pos, int n) {
+    int i;
+    for (i = pos; s[i + n] != '\0'; i++) {
+        s[i] = s[i + n];
+    }
+    s[i] = '\0'; // end the string
+}
+
+int main() {
+    char str[100];
+    int pos, n;
+
+    printf("Enter a string: ");
+    gets(str);
+
+    printf("Enter position to delete from (0 index): ");
+    scanf("%d", &pos);
+
+    printf("Enter number of characters to delete: ");
+    scanf("%d", &n);
+
+    deleteChars(str, pos, n);
+
+    printf("String after deletion: %s\n", str);
+
+    return 0;
+}
