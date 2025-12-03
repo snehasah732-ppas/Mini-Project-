@@ -16,7 +16,7 @@ void insertSubstring(char mainStr[], char subStr[], int pos) {
     for(i = pos; mainStr[i] != '\0'; i++)
         result[j++] = mainStr[i];
 
-    result[j] = '\0';  // Null terminate
+    result[j] = '\0'; 
 
     printf("String after insertion: %s\n", result);
 }
@@ -26,7 +26,7 @@ int main() {
     int pos;
 
     printf("Enter main string: ");
-    gets(mainStr);  // or use fgets(mainStr, sizeof(mainStr), stdin);
+    gets(mainStr);  
 
     printf("Enter substring to insert: ");
     gets(subStr);
