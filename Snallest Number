@@ -2,7 +2,7 @@
 
 int main() {
     int n, i;
-    int arr[100];  // array to store numbers
+    int arr[100];  
     int largest, smallest;
 
     printf("Enter number of elements: ");
