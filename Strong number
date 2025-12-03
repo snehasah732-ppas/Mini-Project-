@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-// Function to find factorial of a digit
 int factorial(int n) {
     int fact = 1, i;
     for(i = 1; i <= n; i++)
@@ -17,7 +16,7 @@ int main() {
     temp = num;
 
     while(temp > 0) {
-        digit = temp % 10;          // extract last digit
-        sum += factorial(digit);    // add factorial of digit
-        temp /= 10;                 // remove last digit
+        digit = temp % 10;          
+        sum += factorial(digit);    
+        temp /= 10;                 
     }
