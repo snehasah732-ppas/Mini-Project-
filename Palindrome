@@ -8,11 +8,11 @@ int isPalindrome(char s[]) {
 
     while (i < j) {
         if (s[i] != s[j])
-            return 0;   // not palindrome
+            return 0;   
         i++;
         j--;
     }
-    return 1;   // palindrome
+    return 1;   
 }
 
 int main() {
