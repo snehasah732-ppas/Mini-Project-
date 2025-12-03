@@ -3,11 +3,11 @@
 int main() {
     float a, x, b, result;
 
-    // Input values of a, x, and b
+    
     printf("Enter values of a, x, and b: ");
     scanf("%f %f %f", &a, &x, &b);
 
-    // Check for division by zero
+    
     if ((a * x - b) == 0) {
         printf("Error! Denominator becomes zero.\n");
     } else {
