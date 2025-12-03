@@ -8,11 +8,11 @@ int main() {
     printf("Enter a string: ");
     gets(str);
 
-    p = str;   // pointer pointing to the string
+    p = str;  
 
     while (*p != '\0') {
         len++;
-        p++;   // move pointer to next character
+        p++;   
     }
 
     printf("Length of the string = %d\n", len);
