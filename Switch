@@ -14,4 +14,4 @@ int main() {
     scanf("%f", &num2);
 
     switch(op) {
-        ca
+        case
