@@ -9,11 +9,11 @@ int main() {
     printf("Prime numbers between 1 and %d are:\n", n);
 
     for (i = 2; i <= n; i++) {
-        isPrime = 1;                   // assume number is prime
+        isPrime = 1;                   
 
-        for (j = 2; j * j <= i; j++) { // check divisors
+        for (j = 2; j * j <= i; j++) { 
             if (i % j == 0) {
-                isPrime = 0;           // not prime
+                isPrime = 0;           
                 break;
             }
         }
