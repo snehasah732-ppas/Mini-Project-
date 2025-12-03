@@ -18,7 +18,7 @@ int main() {
         }
     }
 
-    // Check symmetry: a[i][j] should be equal to a[j][i]
+    
     for(i = 0; i < n; i++) {
         for(j = 0; j < n; j++) {
             if(a[i][j] != a[j][i]) {
