@@ -11,7 +11,7 @@ int main() {
     if ((a * x - b) == 0) {
         printf("Error! Denominator becomes zero.\n");
     } else {
-        // Calculate the expression (a*x)/(a*x - b)
+        
         result = (a * x) / (a * x - b);
         printf("The result of (a*x)/(a*x - b) = %.2f\n", result);
     }
