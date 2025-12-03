@@ -1,22 +1,27 @@
 #include <stdio.h>
-#include <math.h>
 
 int main() {
-    int num, originalNum, remainder, n = 0;
-    double sum = 0;
+    int num, temp, rem, sum = 0;
 
     printf("Enter a number: ");
     scanf("%d", &num);
 
-    originalNum = num;
+    temp = num;
 
-    // Count number of digits
-    while (originalNum != 0) {
-        originalNum /= 10;
-        n++;
+    while(temp > 0) {
+        rem = temp % 10;
+        sum += rem * rem * rem;  // cube of each digit
+        temp /= 10;
     }
 
-    originalNum = num;
+    if(sum == num)
+        printf("%d is an Armstrong Number.\n", num);
+    else
+        printf("%d is not an Armstrong Number.\n", num);
 
-    // Calculate sum of digits raised to power n
+    return 0;
+}
+
+
+
     while (originalN
