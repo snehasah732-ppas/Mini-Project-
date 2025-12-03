@@ -15,7 +15,6 @@ int main() {
         return 0;
     }
 
-    // Read file contents into an array
     while ((ch = fgetc(fp)) != EOF && count < 1000) {
         str[count++] = ch;
     }
@@ -33,7 +32,7 @@ int main() {
         str[n - i - 1] = temp;
     }
 
-    // Write reversed content back to file
+    
     fp = fopen(filename, "w");
     for (i = 0; i < count; i++) {
         fputc(str[i], fp);
